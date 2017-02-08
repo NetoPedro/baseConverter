@@ -25,9 +25,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/spinner"
             android:entries="@array/bases_array"
-            android:textAlignment="viewEnd"
-            android:layout_gravity="right"
-            android:gravity="right"/>
+            android:textAlignment="textEnd"/>
     </LinearLayout>
 
     <LinearLayout
@@ -39,18 +37,19 @@
         android:layout_below="@id/select_base_layout">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
             android:text="@string/value"
             android:id="@+id/title"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:id="@+id/insert_value_field"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:textAlignment="textEnd"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"/>
 
     </LinearLayout>
 
@@ -60,7 +59,8 @@
         android:text="@string/convert"
         android:layout_below="@+id/insert_value_layout"
         android:id="@+id/convert_button"
-        android:layout_margin="8dp"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
     
     <ScrollView
         android:layout_width="match_parent"

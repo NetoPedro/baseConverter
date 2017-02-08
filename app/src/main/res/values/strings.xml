@@ -2,5 +2,5 @@
     <string name="app_name">Base Converter</string>
     <string name="convert">Convert</string>
     <string name="initial_base">Initial base:</string>
-    <string name="value">Value</string>
+    <string name="value">Value:</string>
 </resources>
