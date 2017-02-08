@@ -46,8 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/insert_value_field"
-            android:digits="0123456789ABCDEF"
-            android:inputType="textCapCharacters"
+            android:inputType="text"
             android:textAlignment="textEnd"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"/>

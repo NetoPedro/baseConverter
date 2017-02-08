@@ -112,13 +112,39 @@ public class MainActivity extends AppCompatActivity {
         EditText editInsert  = (EditText) findViewById(R.id.insert_value_field);
         String value = editInsert.getText().toString();
         if(value  == null || value.isEmpty()) return ;
-
+        String newString = "";
+        for(int i  = 0; i< value.length();i++){
+            char c = value.charAt(i);
+            if (c == '0' ||
+                    c == '1'||
+                    c == '2'||
+                    c == '3'||
+                    c == '4'||
+                    c == '5'||
+                    c == '6'||
+                    c == '7'||
+                    c == '8'||
+                    c == '9'||
+                    c == 'A'||
+                    c == 'a'||
+                    c == 'B'||
+                    c == 'b'||
+                    c == 'C'||
+                    c == 'c'||
+                    c == 'D'||
+                    c == 'd'||
+                    c == 'E'||
+                    c == 'e'||
+                    c == 'F'||
+                    c == 'f') newString += c;
+        }
+        editInsert.setText(newString);
         EditText editTextBase0 = (EditText) findViewById(R.id.base_0_value);
-        editTextBase0.setText(Converter.convertHexaBinary(value));
+        editTextBase0.setText(Converter.convertHexaBinary(newString));
         EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
-        editTextBase1.setText(Converter.convertHexaDecimal(value));
+        editTextBase1.setText(Converter.convertHexaDecimal(newString));
         EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
-        editTextBase2.setText(Converter.convertHexaOctal(value));
+        editTextBase2.setText(Converter.convertHexaOctal(newString));
     }
 
     private void onOctalBaseValue(){
@@ -145,6 +171,8 @@ public class MainActivity extends AppCompatActivity {
         t.setText(R.string.octal);
 
         EditText editTextBase0 = (EditText) findViewById(R.id.insert_value_field);
+        editTextBase0.setText(null);
+
         editTextBase0.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
      //   editTextBase0.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
     }
@@ -160,6 +188,8 @@ public class MainActivity extends AppCompatActivity {
         t.setText(R.string.octal);
 
         EditText editTextBase0 = (EditText) findViewById(R.id.insert_value_field);
+        editTextBase0.setText(null);
+
         editTextBase0.setKeyListener(DigitsKeyListener.getInstance("01"));
        // editTextBase0.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
@@ -176,10 +206,10 @@ public class MainActivity extends AppCompatActivity {
         t = (TextView) findViewById(R.id.base_2);
         t.setText(R.string.octal);
         EditText editTextBase0 = (EditText) findViewById(R.id.insert_value_field);
-
-        editTextBase0.setKeyListener(DigitsKeyListener.getInstance("0123456789ABCDEF"));
-        editTextBase0.setInputType(InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS );
-
+        editTextBase0.setText(null);
+        editTextBase0.setKeyListener(null);
+       // editTextBase0.setKeyListener(DigitsKeyListener.getInstance("0123456789ABCDEFabcdef"));
+        editTextBase0.setInputType(InputType.TYPE_CLASS_TEXT );
 
     }
 
@@ -194,6 +224,8 @@ public class MainActivity extends AppCompatActivity {
         t.setText(R.string.decimal);
 
         EditText editTextBase0 = (EditText) findViewById(R.id.insert_value_field);
+        editTextBase0.setText(null);
+
         editTextBase0.setKeyListener(DigitsKeyListener.getInstance("01234567"));
        // editTextBase0.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
