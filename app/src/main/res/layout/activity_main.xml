@@ -46,7 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/insert_value_field"
-            android:inputType="numberDecimal"
+            android:digits="0123456789ABCDEF"
+            android:inputType="textCapCharacters"
             android:textAlignment="textEnd"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"/>
@@ -89,7 +90,9 @@
                     android:layout_weight="1"
                     android:id="@+id/base_0_value"
                     android:enabled="false"
-                    android:inputType="numberDecimal" />
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters"
+                     />
             </LinearLayout>
 
             <LinearLayout
@@ -107,8 +110,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:id="@+id/base_1_value"
                     android:enabled="false"
-                    android:inputType="numberDecimal" />
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters" />
             </LinearLayout>
 
             <LinearLayout
@@ -126,8 +131,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:id="@+id/base_2_value"
                     android:enabled="false"
-                    android:inputType="numberDecimal"/>
+                    android:digits="0123456789ABCDEF"
+                    android:inputType="textCapCharacters"/>
             </LinearLayout>
         </LinearLayout>
 
