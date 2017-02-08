@@ -3,4 +3,8 @@
     <string name="convert">Convert</string>
     <string name="initial_base">Initial base:</string>
     <string name="value">Value:</string>
+    <string name="binary">Binary</string>
+    <string name="hexadecimal">Hexadecimal</string>
+    <string name="octal">Octal</string>
+    <string name="decimal">Decimal</string>
 </resources>
