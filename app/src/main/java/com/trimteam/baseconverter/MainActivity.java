@@ -1,5 +1,6 @@
 package com.trimteam.baseconverter;
 
+import android.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -85,27 +86,42 @@ public class MainActivity extends AppCompatActivity {
         EditText editInsert  = (EditText) findViewById(R.id.insert_value_field);
         String string = editInsert.getText().toString();
         if(string  == null || string.isEmpty()) return ;
-        long value = Long.valueOf(string);
-        EditText editTextBase0 = (EditText) findViewById(R.id.base_0_value);
-        editTextBase0.setText(Converter.convertDecimalBinary(value));
-        EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
-        editTextBase1.setText(Converter.convertDecimalHexa(value));
-        EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
-        editTextBase2.setText(Converter.convertDecimalOctal(value));
+        try {
+            long value = Long.valueOf(string);
+            EditText editTextBase0 = (EditText) findViewById(R.id.base_0_value);
+            editTextBase0.setText(Converter.convertDecimalBinary(value));
+            EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
+            editTextBase1.setText(Converter.convertDecimalHexa(value));
+            EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
+            editTextBase2.setText(Converter.convertDecimalOctal(value));
+        }catch (Exception e){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this,AlertDialog.BUTTON_NEUTRAL);
+            AlertDialog dialog = builder.create();
+            dialog.setMessage("Numero Demasiado Grande");
+            dialog.show();
+        }
     }
 
     private void onBinaryBaseValue(){
         EditText editInsert  = (EditText) findViewById(R.id.insert_value_field);
         String string = editInsert.getText().toString() ;
         if(string  == null || string.isEmpty()) return ;
+        try {
+            long value = Long.valueOf(string);
 
-        long value = Long.valueOf(string);
-        EditText editTextBase0 = (EditText) findViewById(R.id.base_0_value);
-        editTextBase0.setText(Converter.convertBinaryDecimal(value));
-        EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
-        editTextBase1.setText(Converter.convertBinaryHexa(value));
-        EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
-        editTextBase2.setText(Converter.convertBinaryOctal(value));
+            EditText editTextBase0 = (EditText) findViewById(R.id.base_0_value);
+            editTextBase0.setText(Converter.convertBinaryDecimal(value));
+            EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
+            editTextBase1.setText(Converter.convertBinaryHexa(value));
+            EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
+            editTextBase2.setText(Converter.convertBinaryOctal(value));
+        }
+        catch (Exception e){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this,AlertDialog.BUTTON_NEUTRAL);
+            AlertDialog dialog = builder.create();
+            dialog.setMessage("Numero Demasiado Grande");
+            dialog.show();
+        }
     }
 
     private void onHexadecimalBaseValue(){
@@ -151,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
         EditText editInsert  = (EditText) findViewById(R.id.insert_value_field);
         String string = editInsert.getText().toString() ;
         if(string  == null || string.isEmpty()) return ;
-
+        try {
         long value = Long.valueOf(string);
         EditText editTextBase0 = (EditText) findViewById(R.id.base_0_value);
         editTextBase0.setText(Converter.convertOctalBinary(value));
@@ -159,7 +175,13 @@ public class MainActivity extends AppCompatActivity {
         editTextBase1.setText(Converter.convertOctalHexa(value));
         EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
         editTextBase2.setText(Converter.convertOctalDecimal(value));
-
+        }
+        catch (Exception e){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this,AlertDialog.BUTTON_NEUTRAL);
+            AlertDialog dialog = builder.create();
+            dialog.setMessage("Numero Demasiado Grande");
+            dialog.show();
+        }
     }
     private void onDecimalBase(){
         TextView t = (TextView) findViewById(R.id.base_0);
