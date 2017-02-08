@@ -48,6 +48,7 @@
             android:id="@+id/insert_value_field"
             android:inputType="text"
             android:textAlignment="textEnd"
+            android:textAllCaps="true"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="16dp"/>
 
@@ -89,9 +90,10 @@
                     android:layout_weight="1"
                     android:id="@+id/base_0_value"
                     android:enabled="false"
+                    android:textAllCaps="true"
+                    android:textAlignment="textEnd"
                     android:digits="0123456789ABCDEF"
-                    android:inputType="textCapCharacters"
-                     />
+                    android:inputType="textCapCharacters" />
             </LinearLayout>
 
             <LinearLayout
@@ -110,7 +112,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:id="@+id/base_1_value"
+                    android:textAlignment="textEnd"
                     android:enabled="false"
+                    android:textAllCaps="true"
                     android:digits="0123456789ABCDEF"
                     android:inputType="textCapCharacters" />
             </LinearLayout>
@@ -132,6 +136,8 @@
                     android:layout_weight="1"
                     android:id="@+id/base_2_value"
                     android:enabled="false"
+                    android:textAlignment="textEnd"
+                    android:textAllCaps="true"
                     android:digits="0123456789ABCDEF"
                     android:inputType="textCapCharacters"/>
             </LinearLayout>
