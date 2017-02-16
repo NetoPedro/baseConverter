@@ -1,6 +1,8 @@
 package com.trimteam.baseconverter;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -95,9 +97,15 @@ public class MainActivity extends AppCompatActivity {
             EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
             editTextBase2.setText(Converter.convertDecimalOctal(value));
         }catch (Exception e){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this,AlertDialog.BUTTON_NEUTRAL);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.BUTTON_NEUTRAL);
             AlertDialog dialog = builder.create();
-            dialog.setMessage("Numero Demasiado Grande");
+            dialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.setMessage("Inserted value is too long.");
             dialog.show();
         }
     }
@@ -117,9 +125,15 @@ public class MainActivity extends AppCompatActivity {
             editTextBase2.setText(Converter.convertBinaryOctal(value));
         }
         catch (Exception e){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this,AlertDialog.BUTTON_NEUTRAL);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.BUTTON_NEUTRAL);
             AlertDialog dialog = builder.create();
-            dialog.setMessage("Numero Demasiado Grande");
+            dialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.setMessage("Inserted value is too long.");
             dialog.show();
         }
     }
@@ -177,9 +191,15 @@ public class MainActivity extends AppCompatActivity {
         editTextBase2.setText(Converter.convertOctalDecimal(value));
         }
         catch (Exception e){
-            AlertDialog.Builder builder = new AlertDialog.Builder(this,AlertDialog.BUTTON_NEUTRAL);
+            AlertDialog.Builder builder = new AlertDialog.Builder(this, AlertDialog.BUTTON_NEUTRAL);
             AlertDialog dialog = builder.create();
-            dialog.setMessage("Numero Demasiado Grande");
+            dialog.setButton(AlertDialog.BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            dialog.setMessage("Inserted value is too long.");
             dialog.show();
         }
     }
