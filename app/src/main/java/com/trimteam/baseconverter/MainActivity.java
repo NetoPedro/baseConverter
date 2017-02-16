@@ -212,10 +212,17 @@ public class MainActivity extends AppCompatActivity {
         t = (TextView) findViewById(R.id.base_2);
         t.setText(R.string.octal);
 
-        EditText editTextBase0 = (EditText) findViewById(R.id.insert_value_field);
-        editTextBase0.setText(null);
+        EditText editTextBaseValue = (EditText) findViewById(R.id.insert_value_field);
+        editTextBaseValue.setText(null);
 
-        editTextBase0.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
+        editTextBaseValue.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
+
+        EditText editTextBase = (EditText) findViewById(R.id.base_0_value);
+        editTextBase.setText("");
+        EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
+        editTextBase1.setText("");
+        EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
+        editTextBase2.setText("");
      //   editTextBase0.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
     }
 
@@ -233,6 +240,12 @@ public class MainActivity extends AppCompatActivity {
         editTextBase0.setText(null);
 
         editTextBase0.setKeyListener(DigitsKeyListener.getInstance("01"));
+        EditText editTextBase = (EditText) findViewById(R.id.base_0_value);
+        editTextBase.setText("");
+        EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
+        editTextBase1.setText("");
+        EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
+        editTextBase2.setText("");
        // editTextBase0.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
 
@@ -252,6 +265,12 @@ public class MainActivity extends AppCompatActivity {
         editTextBase0.setKeyListener(null);
        // editTextBase0.setKeyListener(DigitsKeyListener.getInstance("0123456789ABCDEFabcdef"));
         editTextBase0.setInputType(InputType.TYPE_CLASS_TEXT );
+        EditText editTextBase = (EditText) findViewById(R.id.base_0_value);
+        editTextBase.setText("");
+        EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
+        editTextBase1.setText("");
+        EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
+        editTextBase2.setText("");
 
     }
 
@@ -269,6 +288,12 @@ public class MainActivity extends AppCompatActivity {
         editTextBase0.setText(null);
 
         editTextBase0.setKeyListener(DigitsKeyListener.getInstance("01234567"));
+        EditText editTextBase = (EditText) findViewById(R.id.base_0_value);
+        editTextBase.setText("");
+        EditText editTextBase1 = (EditText) findViewById(R.id.base_1_value);
+        editTextBase1.setText("");
+        EditText editTextBase2 = (EditText) findViewById(R.id.base_2_value);
+        editTextBase2.setText("");
        // editTextBase0.setInputType(InputType.TYPE_NUMBER_FLAG_DECIMAL);
 
 
